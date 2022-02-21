@@ -4,7 +4,6 @@
 }
 
 body {
-  padding: 0 5vw;
   font-family: "Noto Sans KR", sans-serif;
   line-height: 1.5;
   color: #222;
@@ -41,6 +40,10 @@ li {
   margin-left: 0;
 }
 
+section p {
+  letter-spacing: -0.05em;
+}
+
 .sr-only {
   position: absolute;
   overflow: hidden;
@@ -72,6 +75,12 @@ li {
 }
 
 /* Main */
+main {
+  padding: 0 5vw;
+  border-bottom: 1px solid #464646;
+}
+
+/* Landing */
 .landing {
   margin-bottom: 48px;
 }
@@ -90,7 +99,6 @@ li {
 
 .introduction {
   margin-bottom: 48px;
-  letter-spacing: -0.05em;
 }
 
 .introduction blockquote {
@@ -108,6 +116,37 @@ li {
   content: "About";
   display: block;
   font-weight: 700;
+}
+
+/* History */
+.history {
+  border-top: 1px solid #dadada;
+}
+
+.history-item {
+  padding: 40px 0;
+  border-bottom: 1px solid #dadada;
+}
+
+.history-item-cover-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 24px;
+}
+
+.history-item-contents {
+  display: flex;
+  flex-direction: column;
+}
+
+.history-title {
+  font-size: 1em;
+  margin-bottom: 24px;
+}
+
+.history-desc a {
+  color: #0066ff;
 }
 
 @media screen and (min-width: 768px) {
@@ -144,6 +183,7 @@ li {
   }
 
   /* Main */
+  /* Landing */
   .landing {
     margin-bottom: 60px;
   }
@@ -158,6 +198,7 @@ li {
     font-size: 48px;
   }
 
+  /* Introduction */
   .introduction {
     font-size: 34px;
     margin-bottom: 60px;
@@ -166,6 +207,45 @@ li {
   .introduction blockquote {
     font-size: 30px;
     margin-bottom: 100px;
+  }
+
+  .introduction-desc::before {
+    font-size: 24px;
+  }
+
+  /* History */
+  .history-item {
+    display: flex;
+  }
+
+  .history-item:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .history-item-cover {
+    width: 50%;
+    margin-right: 20px;
+  }
+
+  .history-item:nth-child(even) .history-item-cover {
+    margin-left: 20px;
+    margin-right: 0;
+  }
+
+  .history-item-cover-image {
+    margin-bottom: 0;
+  }
+
+  .history-item-contents {
+    width: 50%;
+  }
+
+  .history-title {
+    font-size: 24px;
+  }
+
+  .history-desc {
+    font-size: 28px;
   }
 }
 
