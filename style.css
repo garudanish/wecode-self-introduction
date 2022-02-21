@@ -5,6 +5,7 @@
 
 body {
   font-family: "Noto Sans KR", sans-serif;
+  color: #222;
 }
 
 /* Reset CSS */
@@ -36,4 +37,61 @@ li {
   list-style-type: none;
   padding-left: 0;
   margin-left: 0;
+}
+
+/* Header */
+.header {
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-title-link,
+.header-github-link {
+  font-weight: 900;
+}
+
+.header-github {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  /* Header */
+  .header {
+    justify-content: space-between;
+    height: 80px;
+  }
+
+  .header-title,
+  .header-github {
+    font-size: 40px;
+    margin: 0 30px;
+  }
+
+  .header-github {
+    display: flex;
+    align-items: center;
+    color: #555;
+    transition: color 250ms ease-in;
+  }
+
+  .header-github:hover {
+    color: #222;
+  }
+
+  .header-github i {
+    margin-right: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    max-width: 1256px;
+  }
 }
