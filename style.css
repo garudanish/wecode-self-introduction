@@ -149,6 +149,35 @@ main {
   color: #0066ff;
 }
 
+/* Footer */
+.sns-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 5vw;
+}
+
+.sns-item a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 30px;
+  font-size: 40px;
+  color: #666;
+  transition: color 250ms ease-in;
+}
+
+.sns-list a:hover {
+  color: #222;
+}
+
+.sns-item svg {
+  width: 35px;
+  height: auto;
+  vertical-align: middle;
+}
+
 @media screen and (min-width: 768px) {
   body {
     max-width: 960px;
@@ -246,6 +275,17 @@ main {
 
   .history-desc {
     font-size: 28px;
+  }
+
+  /* Footer */
+  .sns-item a {
+    font-size: 60px;
+    color: #666;
+    transition: color 250ms ease-in;
+  }
+
+  .sns-item svg {
+    width: 60px;
   }
 }
 
