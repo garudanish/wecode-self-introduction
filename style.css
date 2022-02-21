@@ -4,7 +4,9 @@
 }
 
 body {
+  padding: 0 5vw;
   font-family: "Noto Sans KR", sans-serif;
+  line-height: 1.5;
   color: #222;
 }
 
@@ -39,21 +41,73 @@ li {
   margin-left: 0;
 }
 
+.sr-only {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+}
+
 /* Header */
 .header {
   display: flex;
   height: 50px;
   justify-content: center;
   align-items: center;
+  margin-bottom: 48px;
 }
 
 .header-title-link,
 .header-github-link {
+  line-height: 1;
   font-weight: 900;
 }
 
 .header-github {
   display: none;
+}
+
+/* Main */
+.landing {
+  margin-bottom: 48px;
+}
+
+.landing-profile-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 48px;
+}
+
+.landing-title {
+  font-size: 24px;
+  text-align: center;
+}
+
+.introduction {
+  margin-bottom: 48px;
+  letter-spacing: -0.05em;
+}
+
+.introduction blockquote {
+  margin-bottom: 36px;
+  font-weight: 100;
+  text-indent: 24px;
+}
+
+.introduction blockquote cite {
+  display: block;
+  text-align: right;
+}
+
+.introduction-desc::before {
+  content: "About";
+  display: block;
+  font-weight: 700;
 }
 
 @media screen and (min-width: 768px) {
@@ -88,10 +142,42 @@ li {
   .header-github i {
     margin-right: 10px;
   }
+
+  /* Main */
+  .landing {
+    margin-bottom: 60px;
+  }
+
+  .landing-profile-image {
+    width: 100vw;
+    max-width: 960px;
+    margin-left: -5vw;
+  }
+
+  .landing-title {
+    font-size: 48px;
+  }
+
+  .introduction {
+    font-size: 34px;
+    margin-bottom: 60px;
+  }
+
+  .introduction blockquote {
+    font-size: 30px;
+    margin-bottom: 100px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
   body {
     max-width: 1256px;
+  }
+
+  /* Main */
+  .landing-profile-image {
+    width: 100vw;
+    max-width: 1256px;
+    margin-left: -5vw;
   }
 }
